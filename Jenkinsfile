@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/Azururu/week7_calculator_fx_db.git'
-            }
-        }
         stage('Build') {
             steps {
                 bat 'mvn clean package'
